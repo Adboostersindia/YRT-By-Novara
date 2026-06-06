@@ -69,7 +69,7 @@ export default function AntiAgency() {
               transition: `opacity 1.5s ${EASE}, transform 1.5s ${EASE}`,
             }}
           >
-            <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-3">
+            <p className="font-sans text-xs tracking-[0.2em] text-[#96603A] uppercase mb-3">
               The problem
             </p>
 
@@ -77,7 +77,7 @@ export default function AntiAgency() {
               The traditional agency is designed to bill you, not grow you.
             </h2>
 
-            <div className="w-10 h-px bg-[#B07040] my-5" />
+            <div aria-hidden="true" className="w-10 h-px bg-[#B07040] my-5" />
 
             <p className="font-sans text-sm md:text-base leading-relaxed text-[#4a4a4a]">
               Most agencies win your business with a glossy deck, lock you into
@@ -146,7 +146,7 @@ export default function AntiAgency() {
           >
             <div>
               <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-3">
-                The Novara difference
+                The YRT by Novara π difference
               </p>
               <p className="font-serif italic text-xl md:text-2xl text-white leading-snug max-w-xl">
                 &ldquo;We don&apos;t take retainers. We don&apos;t hand you off. We sit inside

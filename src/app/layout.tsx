@@ -19,15 +19,15 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  "Novara π is your extended revenue department for aesthetics clinics, IVF centres, and dental practices. Paid ads, SEO, AEO, and web — all under one roof.";
+  "YRT by Novara π is your extended revenue department for aesthetics clinics, IVF centres, and dental practices. Paid ads, SEO, AEO, and web — all under one roof.";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Novara π",
+  name: "YRT by Novara π",
   url: BASE_URL,
   email: "hello@novara.com",
-  description: DESCRIPTION,
+  description: "YRT by Novara π — a revenue marketing agency with 8+ years of combined industry experience serving aesthetics clinics, IVF centres, dental practices, and private clinics across the UK, UAE, and India.",
   foundingDate: "2024",
   areaServed: ["GB", "AE", "IN"],
   knowsAbout: [
@@ -45,23 +45,27 @@ const JSON_LD = JSON.stringify(jsonLd);
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Novara π — Your Revenue Department",
+  title: "YRT by Novara π — Your Revenue Department",
   description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Novara π — Your Revenue Department",
+    title: "YRT by Novara π — Your Revenue Department",
     description: DESCRIPTION,
     type: "website",
-    siteName: "Novara π",
+    siteName: "YRT by Novara π",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "YRT by Novara π — Your Revenue Department" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Novara π — Your Revenue Department",
+    title: "YRT by Novara π — Your Revenue Department",
     description: DESCRIPTION,
+    images: ["/opengraph-image"],
   },
 };
 
@@ -72,6 +76,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* Static JSON-LD only — no user input, no XSS risk */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON_LD }}

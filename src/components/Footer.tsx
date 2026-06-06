@@ -61,7 +61,7 @@ export default function Footer() {
       {/* ── Top bar ── */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-16 py-6 flex items-center justify-between border-b border-white/10">
         <span className="font-sans font-medium text-[16px] tracking-[0.2em] uppercase text-white flex items-center">
-          NOVARA<span className="font-serif text-[20px] text-[#B07040] ml-1.5 normal-case">π</span>
+          YRT by Novara<span className="font-serif text-[20px] text-[#B07040] ml-1.5 normal-case">π</span>
         </span>
         <a
           href="mailto:hello@novara.com"
@@ -90,7 +90,7 @@ export default function Footer() {
               Est. 2024
             </span>
             <p className="font-serif text-5xl md:text-6xl font-bold text-white leading-none">
-              NOVARA
+              YRT by Novara
             </p>
             <span className="font-serif text-3xl text-[#B07040] mt-1 leading-none">π</span>
             <div className="border-b border-[#B07040]/30 w-full mt-6" />
@@ -139,7 +139,7 @@ export default function Footer() {
 
       {/* ── Bottom bar ── */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-16 py-5 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <span className="font-sans text-xs text-neutral-600">© 2025 Novara π</span>
+        <span className="font-sans text-xs text-neutral-600">© 2025 YRT by Novara π</span>
         <div className="flex gap-5">
           <Link href="/privacy" className="font-sans text-xs text-neutral-600 hover:text-[#B07040] transition-colors duration-300">
             Privacy

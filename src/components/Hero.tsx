@@ -80,7 +80,7 @@ export default function Hero() {
               department.
             </h1>
 
-            <div className="w-8 h-px bg-[#B07040] my-1" />
+            <div aria-hidden="true" className="w-8 h-px bg-[#B07040] my-1" />
 
             <p className="font-sans text-sm md:text-base leading-relaxed text-[#F5F2ED]/70 max-w-[280px]">
               We bring a full production crew to your clinic, shoot everything,
@@ -93,7 +93,7 @@ export default function Hero() {
 
           {/* Bottom: trust bar + CTAs */}
           <div className="flex flex-col gap-3">
-            <div className="w-full h-px bg-[#F5F2ED]/10 mb-1" />
+            <div aria-hidden="true" className="w-full h-px bg-[#F5F2ED]/10 mb-1" />
             <div className="flex items-center gap-3 overflow-hidden mb-1">
               <span className="font-sans text-[8px] tracking-[0.14em] text-[#F5F2ED]/20 uppercase flex-shrink-0">
                 Trusted by
@@ -143,7 +143,7 @@ export default function Hero() {
                 department.
               </h1>
 
-              <div className="w-12 h-px bg-n-copper my-8" />
+              <div aria-hidden="true" className="w-12 h-px bg-n-copper my-8" />
 
               <p className="font-sans text-sm md:text-base leading-relaxed text-n-muted max-w-sm">
                 We bring a full production crew to your clinic, shoot everything,

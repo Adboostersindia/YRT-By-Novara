@@ -4,9 +4,24 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Results & Case Studies — Novara π",
+  title: "Results & Case Studies — YRT by Novara π",
+  alternates: { canonical: "/results" },
   description:
-    "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how Novara π drives growth through paid ads, SEO, and web.",
+    "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+  openGraph: {
+    title: "Results & Case Studies — YRT by Novara π",
+    description:
+      "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Results & Case Studies — YRT by Novara π" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Results & Case Studies — YRT by Novara π",
+    description:
+      "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+    images: ["/opengraph-image"],
+  },
 };
 
 const CASES = [
@@ -43,7 +58,7 @@ const CASES = [
 ];
 
 const STATS = [
-  { value: "5+",   label: "Years in market" },
+  { value: "8+",   label: "Years in market" },
   { value: "400+", label: "Campaigns launched" },
   { value: "£2M+", label: "Ad spend managed" },
   { value: "4×",   label: "Average lead growth" },
