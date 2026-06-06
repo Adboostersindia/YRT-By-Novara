@@ -20,7 +20,7 @@ export default function CTABanner() {
   }, []);
 
   return (
-    <section className="w-full py-20 px-5 bg-[#B07040] overflow-x-hidden">
+    <section id="contact" className="w-full py-20 px-5 bg-[#B07040] overflow-x-hidden">
       <div
         ref={cardRef}
         className="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl py-14 px-6 md:px-20 text-center"
