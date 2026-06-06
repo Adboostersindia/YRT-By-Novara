@@ -164,17 +164,6 @@ export default function Founders() {
           ))}
         </div>
 
-        {/* Placeholder note */}
-        <p
-          className="font-sans text-sm leading-relaxed text-neutral-400 text-center italic mt-12"
-          style={{
-            opacity:    cardsVisible ? 1 : 0,
-            transition: `opacity 1.2s ${EASE} 600ms`,
-          }}
-        >
-          Names and photos coming soon — we&apos;re too busy getting our clients
-          results to finish our own website.
-        </p>
 
       </div>
     </section>

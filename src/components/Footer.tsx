@@ -13,25 +13,6 @@ const NAV_LINKS = [
   { label: "About",       href: "#about" },
 ];
 
-function InstagramIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="4" width="16" height="16" rx="4" />
-      <circle cx="12" cy="12" r="3" />
-      <circle cx="16.5" cy="7.5" r="0.5" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
-      <line x1="6" y1="10" x2="6" y2="20" />
-      <path d="M10 10h4v1.5a3.5 3.5 0 0 1 7 0V20h-4v-8.5a1.5 1.5 0 0 0-3 0V20h-4V10z" />
-    </svg>
-  );
-}
 
 function NavLink({ href, label }: { href: string; label: string }) {
   const [hovered, setHovered] = useState(false);
@@ -101,22 +82,6 @@ export default function Footer() {
               Your extended revenue department — for aesthetics clinics, IVF
               centres, dental practices, and private clinics that want to grow.
             </p>
-            <div className="flex gap-5 mt-8 text-neutral-500 justify-center md:justify-start">
-              <a
-                href="https://instagram.com"
-                aria-label="Instagram"
-                className="hover:text-[#B07040] transition-colors duration-300"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://linkedin.com"
-                aria-label="LinkedIn"
-                className="hover:text-[#B07040] transition-colors duration-300"
-              >
-                <LinkedInIcon />
-              </a>
-            </div>
           </div>
 
           {/* Center: large logo anchor */}
