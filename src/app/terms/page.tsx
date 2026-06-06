@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service — YRT by Novara π",
+  alternates: { canonical: "/terms" },
   description: "Terms and conditions governing the use of YRT by Novara π services.",
   openGraph: {
     title: "Terms of Service — YRT by Novara π",

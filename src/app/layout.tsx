@@ -47,6 +47,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: "YRT by Novara π — Your Revenue Department",
   description: DESCRIPTION,
+  alternates: { canonical: "/" },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

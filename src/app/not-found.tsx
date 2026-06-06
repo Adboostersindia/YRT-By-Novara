@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Page Not Found — YRT by Novara π",
+  robots: { index: false, follow: false },
 };
 
 export default function NotFound() {

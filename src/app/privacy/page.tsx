@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — YRT by Novara π",
+  alternates: { canonical: "/privacy" },
   description: "How YRT by Novara π collects, uses, and protects your personal data.",
   openGraph: {
     title: "Privacy Policy — YRT by Novara π",

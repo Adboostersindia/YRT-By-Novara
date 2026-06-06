@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Results & Case Studies — YRT by Novara π",
+  alternates: { canonical: "/results" },
   description:
     "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
   openGraph: {

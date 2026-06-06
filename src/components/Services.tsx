@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-
-const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+import { AnimateIn } from "./AnimateIn";
 
 const SERVICES = [
   { num: "01", name: "Paid Ads",          desc: "Google, Meta & Facebook — built to convert." },
@@ -12,40 +8,13 @@ const SERVICES = [
 ];
 
 export default function Services() {
-  const [headingVisible, setHeadingVisible] = useState(false);
-  const [rowsVisible,    setRowsVisible]    = useState(false);
-
-  const headingRef = useRef<HTMLDivElement>(null);
-  const rowsRef    = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          if (entry.target === headingRef.current) setHeadingVisible(true);
-          if (entry.target === rowsRef.current)    setRowsVisible(true);
-        });
-      },
-      { threshold: 0.15 }
-    );
-    [headingRef, rowsRef].forEach((r) => { if (r.current) obs.observe(r.current); });
-    return () => obs.disconnect();
-  }, []);
-
   return (
     <section id="services" className="w-full py-16 md:py-20 bg-n-dark overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-16">
 
-        {/* Heading block — slides up */}
-        <div
-          ref={headingRef}
+        <AnimateIn
           className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 gap-4"
-          style={{
-            opacity:    headingVisible ? 1 : 0,
-            transform:  headingVisible ? "translateY(0)" : "translateY(30px)",
-            transition: `opacity 1.4s ${EASE}, transform 1.4s ${EASE}`,
-          }}
+          direction="up"
         >
           <div>
             <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-4">
@@ -68,22 +37,13 @@ export default function Services() {
               className="absolute bottom-0 left-0 h-px w-0 bg-[#B07040] transition-all duration-300 ease-out group-hover:w-full"
             />
           </a>
-        </div>
+        </AnimateIn>
 
-        {/* Service rows — slide from right, staggered */}
-        <div ref={rowsRef}>
+        <div>
           {SERVICES.map((s, i) => (
-            <div
-              key={s.num}
-              style={{
-                opacity:    rowsVisible ? 1 : 0,
-                transform:  rowsVisible ? "translateX(0)" : "translateX(60px)",
-                transition: `opacity 1.4s ${EASE} ${i * 200}ms, transform 1.4s ${EASE} ${i * 200}ms`,
-              }}
-            >
+            <AnimateIn key={s.num} direction="left" distance={60} delay={i * 200}>
               <div className="group border-t border-white/10 hover:bg-white/[0.03] transition-all duration-300 cursor-default py-6 hover:py-8">
 
-                {/* ── Mobile layout ── */}
                 <div className="md:hidden">
                   <div className="flex items-baseline gap-3">
                     <span className="font-mono text-[11px] tracking-widest text-[#B07040] shrink-0">
@@ -98,7 +58,6 @@ export default function Services() {
                   </p>
                 </div>
 
-                {/* ── Desktop layout ── */}
                 <div className="hidden md:flex items-center">
                   <span className="font-mono text-[11px] tracking-widest text-[#B07040] w-16 shrink-0">
                     {s.num}
@@ -118,7 +77,7 @@ export default function Services() {
                 </div>
 
               </div>
-            </div>
+            </AnimateIn>
           ))}
           <div className="border-t border-white/10" />
         </div>
