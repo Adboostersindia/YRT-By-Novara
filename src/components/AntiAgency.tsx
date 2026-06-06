@@ -146,7 +146,7 @@ export default function AntiAgency() {
           >
             <div>
               <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-3">
-                The Novara difference
+                The YRT by Novara π difference
               </p>
               <p className="font-serif italic text-xl md:text-2xl text-white leading-snug max-w-xl">
                 &ldquo;We don&apos;t take retainers. We don&apos;t hand you off. We sit inside

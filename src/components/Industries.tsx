@@ -88,7 +88,7 @@ export default function Industries() {
                 the game.
               </h2>
               <p className="font-sans text-sm md:text-base leading-relaxed text-neutral-500 mt-4 mb-8">
-                5+ years inside medical aesthetics, fertility, and private
+                8+ years inside medical aesthetics, fertility, and private
                 clinical practices. We speak your patients&apos; language — and your
                 competitors&apos; weaknesses — before you brief us.
               </p>

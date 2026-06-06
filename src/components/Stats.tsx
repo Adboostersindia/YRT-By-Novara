@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const STATS = [
-  { value: 5,   prefix: "",  suffix: "+",  label: "Years of industry experience" },
+  { value: 8,   prefix: "",  suffix: "+",  label: "Years of industry experience" },
   { value: 400, prefix: "",  suffix: "+",  label: "Campaigns launched" },
   { value: 2,   prefix: "£", suffix: "M+", label: "Spent on high-performance ads" },
   { value: 4,   prefix: "",  suffix: "×",  label: "Average lead growth" },

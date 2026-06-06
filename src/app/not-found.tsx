@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page Not Found — Novara π",
+  title: "Page Not Found — YRT by Novara π",
 };
 
 export default function NotFound() {
@@ -27,7 +27,7 @@ export default function NotFound() {
         href="/"
         className="font-sans font-medium text-[15px] tracking-[0.2em] uppercase text-white flex items-center mt-16"
       >
-        NOVARA<span className="font-serif text-[18px] text-[#B07040] ml-1.5 normal-case">π</span>
+        YRT by Novara<span className="font-serif text-[18px] text-[#B07040] ml-1.5 normal-case">π</span>
       </Link>
     </main>
   );

@@ -41,7 +41,7 @@ export default function Navbar() {
           href="/"
           className="font-sans font-medium text-[17px] tracking-[0.2em] uppercase text-white flex items-center shrink-0"
         >
-          NOVARA<span className="font-serif text-[20px] text-[#B07040] ml-1.5 normal-case">π</span>
+          YRT by Novara<span className="font-serif text-[20px] text-[#B07040] ml-1.5 normal-case">π</span>
         </a>
 
         {/* Nav links — desktop center */}

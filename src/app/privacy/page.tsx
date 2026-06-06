@@ -5,8 +5,8 @@ import LegalSection from "@/components/LegalSection";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Novara π",
-  description: "How Novara π collects, uses, and protects your personal data.",
+  title: "Privacy Policy — YRT by Novara π",
+  description: "How YRT by Novara π collects, uses, and protects your personal data.",
 };
 
 export default function PrivacyPage() {
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
 
             <LegalSection title="Who we are">
               <p>
-                Novara π (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a growth and revenue marketing agency
+                YRT by Novara π (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a growth and revenue marketing agency
                 serving aesthetics clinics, IVF centres, dental practices, and private clinics.
                 Our contact email is{" "}
                 <a href="mailto:hello@novara.com" className="text-[#B07040] hover:underline">

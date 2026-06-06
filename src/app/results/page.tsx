@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Results & Case Studies — Novara π",
+  title: "Results & Case Studies — YRT by Novara π",
   description:
-    "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how Novara π drives growth through paid ads, SEO, and web.",
+    "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
 };
 
 const CASES = [
@@ -43,7 +43,7 @@ const CASES = [
 ];
 
 const STATS = [
-  { value: "5+",   label: "Years in market" },
+  { value: "8+",   label: "Years in market" },
   { value: "400+", label: "Campaigns launched" },
   { value: "£2M+", label: "Ad spend managed" },
   { value: "4×",   label: "Average lead growth" },

@@ -5,8 +5,8 @@ import LegalSection from "@/components/LegalSection";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Novara π",
-  description: "Terms and conditions governing the use of Novara π services.",
+  title: "Terms of Service — YRT by Novara π",
+  description: "Terms and conditions governing the use of YRT by Novara π services.",
 };
 
 export default function TermsPage() {
@@ -29,7 +29,7 @@ export default function TermsPage() {
 
             <LegalSection title="Agreement to terms">
               <p>
-                By accessing or using the Novara π website and services, you agree to be bound
+                By accessing or using the YRT by Novara π website and services, you agree to be bound
                 by these Terms of Service. If you do not agree, please do not use our website
                 or engage our services.
               </p>
@@ -37,7 +37,7 @@ export default function TermsPage() {
 
             <LegalSection title="Our services">
               <p>
-                Novara π provides growth marketing services including paid advertising, SEO and AEO,
+                YRT by Novara π provides growth marketing services including paid advertising, SEO and AEO,
                 website design and development, and related digital marketing services — primarily
                 for aesthetics clinics, IVF centres, dental practices, and private clinics.
               </p>
@@ -60,7 +60,7 @@ export default function TermsPage() {
             <LegalSection title="Intellectual property">
               <p>
                 All content on this website — including text, graphics, logos, and design — is the
-                property of Novara π and is protected by applicable intellectual property laws.
+                property of YRT by Novara π and is protected by applicable intellectual property laws.
                 You may not use our content without prior written consent.
               </p>
             </LegalSection>
@@ -69,7 +69,7 @@ export default function TermsPage() {
               <p>
                 Ownership and licensing of creative work, ad assets, and other deliverables produced
                 for clients are governed by the terms of the relevant client agreement. In the absence
-                of a separate agreement, all deliverables remain the property of Novara π until full
+                of a separate agreement, all deliverables remain the property of YRT by Novara π until full
                 payment has been received.
               </p>
             </LegalSection>
@@ -85,7 +85,7 @@ export default function TermsPage() {
 
             <LegalSection title="Limitation of liability">
               <p>
-                To the fullest extent permitted by law, Novara π shall not be liable for any indirect,
+                To the fullest extent permitted by law, YRT by Novara π shall not be liable for any indirect,
                 incidental, or consequential damages arising from your use of our website or services.
                 Our total liability for any claim shall not exceed the fees paid by you in the three
                 months preceding the claim.

@@ -19,12 +19,12 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  "Novara π is your extended revenue department for aesthetics clinics, IVF centres, and dental practices. Paid ads, SEO, AEO, and web — all under one roof.";
+  "YRT by Novara π is your extended revenue department for aesthetics clinics, IVF centres, and dental practices. Paid ads, SEO, AEO, and web — all under one roof.";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Novara π",
+  name: "YRT by Novara π",
   url: BASE_URL,
   email: "hello@novara.com",
   description: DESCRIPTION,
@@ -45,7 +45,7 @@ const JSON_LD = JSON.stringify(jsonLd);
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Novara π — Your Revenue Department",
+  title: "YRT by Novara π — Your Revenue Department",
   description: DESCRIPTION,
   icons: {
     icon: "/favicon.svg",
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Novara π — Your Revenue Department",
+    title: "YRT by Novara π — Your Revenue Department",
     description: DESCRIPTION,
     type: "website",
-    siteName: "Novara π",
+    siteName: "YRT by Novara π",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Novara π — Your Revenue Department",
+    title: "YRT by Novara π — Your Revenue Department",
     description: DESCRIPTION,
   },
 };
