@@ -6,10 +6,10 @@ import Image from "next/image";
 const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 
 const INDUSTRIES = [
-  { name: "Aesthetics",      href: "#aesthetics" },
-  { name: "IVF & Fertility", href: "#ivf" },
-  { name: "Dental",          href: "#dental" },
-  { name: "Private Clinics", href: "#private-clinics" },
+  { name: "Aesthetics",      href: "#contact" },
+  { name: "IVF & Fertility", href: "#contact" },
+  { name: "Dental",          href: "#contact" },
+  { name: "Private Clinics", href: "#contact" },
 ];
 
 export default function Industries() {

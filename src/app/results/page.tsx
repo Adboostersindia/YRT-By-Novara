@@ -7,6 +7,20 @@ export const metadata: Metadata = {
   title: "Results & Case Studies — YRT by Novara π",
   description:
     "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+  openGraph: {
+    title: "Results & Case Studies — YRT by Novara π",
+    description:
+      "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Results & Case Studies — YRT by Novara π" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Results & Case Studies — YRT by Novara π",
+    description:
+      "Real results from aesthetics clinics, IVF centres, dental practices, and private clinics. See how YRT by Novara π drives growth through paid ads, SEO, and web.",
+    images: ["/opengraph-image"],
+  },
 };
 
 const CASES = [

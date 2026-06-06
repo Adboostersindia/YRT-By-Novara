@@ -57,11 +57,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     type: "website",
     siteName: "YRT by Novara π",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "YRT by Novara π — Your Revenue Department" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "YRT by Novara π — Your Revenue Department",
     description: DESCRIPTION,
+    images: ["/opengraph-image"],
   },
 };
 

@@ -7,6 +7,18 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy — YRT by Novara π",
   description: "How YRT by Novara π collects, uses, and protects your personal data.",
+  openGraph: {
+    title: "Privacy Policy — YRT by Novara π",
+    description: "How YRT by Novara π collects, uses, and protects your personal data.",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "YRT by Novara π" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy — YRT by Novara π",
+    description: "How YRT by Novara π collects, uses, and protects your personal data.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function PrivacyPage() {
