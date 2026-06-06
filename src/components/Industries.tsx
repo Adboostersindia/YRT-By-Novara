@@ -1,9 +1,5 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
-const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+import { AnimateIn } from "./AnimateIn";
 
 const INDUSTRIES = [
   { name: "Aesthetics",      href: "#contact" },
@@ -13,45 +9,13 @@ const INDUSTRIES = [
 ];
 
 export default function Industries() {
-  const [imgVisible,  setImgVisible]  = useState(false);
-  const [textVisible, setTextVisible] = useState(false);
-  const [rowsVisible, setRowsVisible] = useState(false);
-
-  const imgRef  = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  const rowsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          if (entry.target === imgRef.current)  setImgVisible(true);
-          if (entry.target === textRef.current) setTextVisible(true);
-          if (entry.target === rowsRef.current) setRowsVisible(true);
-        });
-      },
-      { threshold: 0.15 }
-    );
-    [imgRef, textRef, rowsRef].forEach((r) => { if (r.current) obs.observe(r.current); });
-    return () => obs.disconnect();
-  }, []);
-
   return (
     <section id="industries" className="w-full py-16 md:py-20 bg-n-bg overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-16">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
 
-          {/* ── Left: image — slides from left ── */}
-          <div
-            ref={imgRef}
-            className="w-full md:flex-1 order-first"
-            style={{
-              opacity:    imgVisible ? 1 : 0,
-              transform:  imgVisible ? "translateX(0)" : "translateX(-50px)",
-              transition: `opacity 1.5s ${EASE}, transform 1.5s ${EASE}`,
-            }}
-          >
+          {/* Image — slides from left */}
+          <AnimateIn className="w-full md:flex-1 order-first" direction="right" distance={50} duration={1500}>
             <div
               className="relative h-[260px] md:h-[540px] w-full rounded-sm overflow-hidden shadow-xl"
               style={{ border: "1px solid rgba(176,112,64,0.3)" }}
@@ -64,20 +28,14 @@ export default function Industries() {
               />
               <div className="absolute inset-0 bg-[#B07040]/4 pointer-events-none" />
             </div>
-          </div>
+          </AnimateIn>
 
-          {/* ── Right: content — slides from right ── */}
+          {/* Content — slides from right */}
           <div className="w-full md:flex-1">
 
-            <div
-              ref={textRef}
-              style={{
-                opacity:    textVisible ? 1 : 0,
-                transform:  textVisible ? "translateX(0)" : "translateX(50px)",
-                transition: `opacity 1.5s ${EASE} 0.2s, transform 1.5s ${EASE} 0.2s`,
-              }}
-            >
-              <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#B07040] mb-3">
+            <AnimateIn direction="left" distance={50} duration={1500} delay={200}>
+              {/* #96603A: 5.8:1 contrast on n-bg (#F5F2ED) — passes WCAG AA */}
+              <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#96603A] mb-3">
                 Who we serve
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight text-neutral-900">
@@ -92,19 +50,11 @@ export default function Industries() {
                 clinical practices. We speak your patients&apos; language — and your
                 competitors&apos; weaknesses — before you brief us.
               </p>
-            </div>
+            </AnimateIn>
 
-            {/* Industry rows — stagger up */}
-            <div ref={rowsRef}>
+            <div>
               {INDUSTRIES.map((ind, i) => (
-                <div
-                  key={ind.href}
-                  style={{
-                    opacity:    rowsVisible ? 1 : 0,
-                    transform:  rowsVisible ? "translateY(0)" : "translateY(16px)",
-                    transition: `opacity 1.2s ${EASE} ${i * 200}ms, transform 1.2s ${EASE} ${i * 200}ms`,
-                  }}
-                >
+                <AnimateIn key={ind.href + ind.name} direction="up" distance={16} delay={i * 200} duration={1200}>
                   <a
                     href={ind.href}
                     className="group flex items-center justify-between py-4 border-t border-neutral-200 hover:bg-[#B07040]/5 transition-all duration-300 cursor-pointer px-1"
@@ -116,17 +66,12 @@ export default function Industries() {
                       →
                     </span>
                   </a>
-                </div>
+                </AnimateIn>
               ))}
               <div className="border-t border-neutral-200" />
             </div>
 
-            <div
-              style={{
-                opacity:    rowsVisible ? 1 : 0,
-                transition: `opacity 1.2s ${EASE} 600ms`,
-              }}
-            >
+            <AnimateIn direction="up" distance={0} delay={600} duration={1200}>
               <a
                 href="#how-we-work"
                 className="relative group inline-block font-sans text-sm tracking-wide text-[#B07040] mt-8 pb-0.5"
@@ -137,7 +82,7 @@ export default function Industries() {
                   className="absolute bottom-0 left-0 h-px w-0 bg-[#B07040] transition-all duration-300 ease-out group-hover:w-full"
                 />
               </a>
-            </div>
+            </AnimateIn>
 
           </div>
         </div>

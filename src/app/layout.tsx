@@ -48,6 +48,7 @@ export const metadata: Metadata = {
   title: "YRT by Novara π — Your Revenue Department",
   description: DESCRIPTION,
   alternates: { canonical: "/" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

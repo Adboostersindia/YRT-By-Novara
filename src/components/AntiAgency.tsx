@@ -69,7 +69,7 @@ export default function AntiAgency() {
               transition: `opacity 1.5s ${EASE}, transform 1.5s ${EASE}`,
             }}
           >
-            <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-3">
+            <p className="font-sans text-xs tracking-[0.2em] text-[#96603A] uppercase mb-3">
               The problem
             </p>
 
