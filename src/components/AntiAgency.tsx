@@ -77,7 +77,7 @@ export default function AntiAgency() {
               The traditional agency is designed to bill you, not grow you.
             </h2>
 
-            <div className="w-10 h-px bg-[#B07040] my-5" />
+            <div aria-hidden="true" className="w-10 h-px bg-[#B07040] my-5" />
 
             <p className="font-sans text-sm md:text-base leading-relaxed text-[#4a4a4a]">
               Most agencies win your business with a glossy deck, lock you into

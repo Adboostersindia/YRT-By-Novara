@@ -44,8 +44,8 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SECONDARY.map((q, i) => (
-            <AnimateIn key={q.name} direction="up" delay={i * 200}>
-              <div className="bg-n-bg/[0.04] border border-n-bg/[0.08] p-8">
+            <AnimateIn key={q.name} direction="up" delay={i * 200} className="h-full">
+              <div className="bg-n-bg/[0.04] border border-n-bg/[0.08] p-8 h-full">
                 <p className="font-sans text-sm md:text-base leading-relaxed italic text-n-bg/70">
                   &ldquo;{q.quote}&rdquo;
                 </p>

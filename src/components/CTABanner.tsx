@@ -16,7 +16,7 @@ export default function CTABanner() {
           Ready to grow?
         </h2>
 
-        <div className="border-t-2 border-[#B07040] w-12 mx-auto my-5" />
+        <div aria-hidden="true" className="border-t-2 border-[#B07040] w-12 mx-auto my-5" />
 
         <p className="font-sans text-sm md:text-base leading-relaxed text-neutral-500 max-w-md mx-auto mb-8">
           No pitch decks. No retainer traps.

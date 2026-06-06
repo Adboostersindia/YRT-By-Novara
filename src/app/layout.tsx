@@ -27,7 +27,7 @@ const jsonLd = {
   name: "YRT by Novara π",
   url: BASE_URL,
   email: "hello@novara.com",
-  description: DESCRIPTION,
+  description: "YRT by Novara π — a revenue marketing agency with 8+ years of combined industry experience serving aesthetics clinics, IVF centres, dental practices, and private clinics across the UK, UAE, and India.",
   foundingDate: "2024",
   areaServed: ["GB", "AE", "IN"],
   knowsAbout: [
@@ -76,6 +76,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* Static JSON-LD only — no user input, no XSS risk */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON_LD }}
