@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LegalSection from "@/components/LegalSection";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Novara π",
   description: "How Novara π collects, uses, and protects your personal data.",
 };
-
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="mb-10">
-      <h2 className="font-sans text-xs tracking-widest uppercase text-[#B07040] mb-3">{title}</h2>
-      <div className="font-sans text-sm text-neutral-600 leading-relaxed space-y-3">
-        {children}
-      </div>
-    </section>
-  );
-}
 
 export default function PrivacyPage() {
   return (
@@ -37,7 +27,7 @@ export default function PrivacyPage() {
 
           <div className="border-t border-neutral-200 pt-10">
 
-            <Section title="Who we are">
+            <LegalSection title="Who we are">
               <p>
                 Novara π (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a growth and revenue marketing agency
                 serving aesthetics clinics, IVF centres, dental practices, and private clinics.
@@ -46,9 +36,9 @@ export default function PrivacyPage() {
                   hello@novara.com
                 </a>.
               </p>
-            </Section>
+            </LegalSection>
 
-            <Section title="What data we collect">
+            <LegalSection title="What data we collect">
               <p>We may collect the following information when you interact with our website or contact us:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Name and email address (via enquiry or booking forms)</li>
@@ -56,9 +46,9 @@ export default function PrivacyPage() {
                 <li>Usage data such as pages visited, time on site, and referral source (via analytics)</li>
                 <li>Any other information you voluntarily provide</li>
               </ul>
-            </Section>
+            </LegalSection>
 
-            <Section title="How we use your data">
+            <LegalSection title="How we use your data">
               <p>We use your data to:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Respond to your enquiries and schedule discovery calls</li>
@@ -66,9 +56,9 @@ export default function PrivacyPage() {
                 <li>Send relevant marketing updates (only with your consent)</li>
                 <li>Improve our website and understand how visitors use it</li>
               </ul>
-            </Section>
+            </LegalSection>
 
-            <Section title="Legal basis for processing">
+            <LegalSection title="Legal basis for processing">
               <p>
                 We process your personal data under the following legal bases (UK GDPR):
               </p>
@@ -77,32 +67,32 @@ export default function PrivacyPage() {
                 <li><strong>Legitimate interests</strong> — for responding to enquiries and improving our services</li>
                 <li><strong>Contract</strong> — for delivering services to clients</li>
               </ul>
-            </Section>
+            </LegalSection>
 
-            <Section title="Data sharing">
+            <LegalSection title="Data sharing">
               <p>
                 We do not sell your personal data. We may share it with trusted third-party tools
                 (such as CRM, email, or analytics platforms) strictly to operate our business.
                 All third parties are required to handle your data securely and in accordance with
                 applicable law.
               </p>
-            </Section>
+            </LegalSection>
 
-            <Section title="Cookies">
+            <LegalSection title="Cookies">
               <p>
                 Our website may use cookies and similar tracking technologies to analyse traffic
                 and improve your experience. You can control cookie settings through your browser.
               </p>
-            </Section>
+            </LegalSection>
 
-            <Section title="Data retention">
+            <LegalSection title="Data retention">
               <p>
                 We retain your personal data only as long as necessary for the purposes outlined
                 above, or as required by law.
               </p>
-            </Section>
+            </LegalSection>
 
-            <Section title="Your rights">
+            <LegalSection title="Your rights">
               <p>Under UK GDPR, you have the right to:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Access the personal data we hold about you</li>
@@ -117,14 +107,14 @@ export default function PrivacyPage() {
                   hello@novara.com
                 </a>.
               </p>
-            </Section>
+            </LegalSection>
 
-            <Section title="Changes to this policy">
+            <LegalSection title="Changes to this policy">
               <p>
                 We may update this Privacy Policy from time to time. The date at the top of this
                 page reflects when it was last revised.
               </p>
-            </Section>
+            </LegalSection>
 
           </div>
 

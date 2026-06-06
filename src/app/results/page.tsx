@@ -88,9 +88,9 @@ export default function ResultsPage() {
         {/* ── Case studies ── */}
         <section className="py-20 px-5 sm:px-8 md:px-16 max-w-6xl mx-auto">
           <div className="space-y-0">
-            {CASES.map((c, i) => (
+            {CASES.map((c) => (
               <div
-                key={i}
+                key={`${c.tag}-${c.location}`}
                 className="group border-t border-white/10 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start hover:bg-white/[0.02] transition-colors duration-300 px-0"
               >
                 {/* Left */}
