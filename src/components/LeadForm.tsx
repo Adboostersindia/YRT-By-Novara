@@ -57,8 +57,27 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="contact" className="w-full py-20 px-5 bg-neutral-50 overflow-x-hidden">
-      <div className="max-w-2xl mx-auto">
+    <section
+      id="contact"
+      className="relative w-full py-20 px-5 overflow-hidden"
+      style={{ background: "linear-gradient(180deg, #F5F2ED 0%, #ECEAE4 100%)" }}
+    >
+      {/* Decorative copper glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(176,112,64,0.16) 0%, rgba(176,112,64,0) 70%)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-48 -right-32 w-[420px] h-[420px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(circle, rgba(176,112,64,0.1) 0%, rgba(176,112,64,0) 70%)" }}
+      />
+      {/* Fine border frame */}
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 border-t border-[#B07040]/15" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 border-b border-[#B07040]/15" />
+
+      <div className="relative max-w-2xl mx-auto">
         <div className="text-center mb-10">
           <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#B07040] mb-4">
             Let&apos;s Talk

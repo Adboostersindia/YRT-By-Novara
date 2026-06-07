@@ -21,8 +21,8 @@ export default function Industries() {
               style={{ border: "1px solid rgba(176,112,64,0.3)" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80"
-                alt="Medical clinic interior"
+                src="/who-we-serve.png"
+                alt="Real clinics, real growth: case study snapshot of qualified leads, cost per lead, consultations booked, return on ad spend, revenue generated, and average rating"
                 fill
                 className="object-cover"
               />
