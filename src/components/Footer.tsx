@@ -139,7 +139,7 @@ export default function Footer() {
 
       {/* ── Bottom bar ── */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-16 py-5 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <span className="font-sans text-xs text-neutral-600">© 2025 YRT by Novara π</span>
+        <span className="font-sans text-xs text-neutral-600">© 2026 YRT by Novara π</span>
         <div className="flex gap-5">
           <Link href="/privacy" className="font-sans text-xs text-neutral-600 hover:text-[#B07040] transition-colors duration-300">
             Privacy
