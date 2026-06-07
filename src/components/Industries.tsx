@@ -62,9 +62,6 @@ export default function Industries() {
                     <span className="font-serif text-lg font-semibold text-neutral-800 group-hover:text-[#B07040] transition-colors duration-300">
                       {ind.name}
                     </span>
-                    <span className="text-[#B07040] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      →
-                    </span>
                   </a>
                 </AnimateIn>
               ))}
