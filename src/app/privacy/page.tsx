@@ -45,8 +45,8 @@ export default function PrivacyPage() {
                 YRT by Novara π (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a growth and revenue marketing agency
                 serving aesthetics clinics, IVF centres, dental practices, and private clinics.
                 Our contact email is{" "}
-                <a href="mailto:hello@novara.com" className="text-[#B07040] hover:underline">
-                  hello@novara.com
+                <a href="mailto:growth@yourevenueteam.com" className="text-[#B07040] hover:underline">
+                  growth@yourevenueteam.com
                 </a>.
               </p>
             </LegalSection>
@@ -116,8 +116,8 @@ export default function PrivacyPage() {
               </ul>
               <p>
                 To exercise any of these rights, email us at{" "}
-                <a href="mailto:hello@novara.com" className="text-[#B07040] hover:underline">
-                  hello@novara.com
+                <a href="mailto:growth@yourevenueteam.com" className="text-[#B07040] hover:underline">
+                  growth@yourevenueteam.com
                 </a>.
               </p>
             </LegalSection>

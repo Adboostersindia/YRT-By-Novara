@@ -64,10 +64,10 @@ export default function Footer() {
           YRT by Novara<span className="font-serif text-[20px] text-[#B07040] ml-1.5 normal-case">π</span>
         </span>
         <a
-          href="mailto:hello@novara.com"
+          href="mailto:growth@yourevenueteam.com"
           className="font-sans text-sm text-neutral-400 hover:text-[#B07040] transition-colors duration-300"
         >
-          hello@novara.com
+          growth@yourevenueteam.com
         </a>
       </div>
 
@@ -116,10 +116,10 @@ export default function Footer() {
               Book a Call
             </a>
             <a
-              href="mailto:hello@novara.com"
+              href="mailto:growth@yourevenueteam.com"
               className="font-sans text-sm text-neutral-400 hover:text-[#B07040] transition-colors duration-300 mt-4"
             >
-              hello@novara.com
+              growth@yourevenueteam.com
             </a>
           </div>
         </div>

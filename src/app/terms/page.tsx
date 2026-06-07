@@ -122,8 +122,8 @@ export default function TermsPage() {
             <LegalSection title="Contact">
               <p>
                 For any questions about these Terms, please contact us at{" "}
-                <a href="mailto:hello@novara.com" className="text-[#B07040] hover:underline">
-                  hello@novara.com
+                <a href="mailto:growth@yourevenueteam.com" className="text-[#B07040] hover:underline">
+                  growth@yourevenueteam.com
                 </a>.
               </p>
             </LegalSection>

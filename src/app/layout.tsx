@@ -26,7 +26,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "YRT by Novara π",
   url: BASE_URL,
-  email: "hello@novara.com",
+  email: "growth@yourevenueteam.com",
   description: "YRT by Novara π — a revenue marketing agency with 8+ years of combined industry experience serving aesthetics clinics, IVF centres, dental practices, and private clinics across the UK, UAE, and India.",
   foundingDate: "2024",
   areaServed: ["GB", "AE", "IN"],
