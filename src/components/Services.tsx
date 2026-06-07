@@ -13,30 +13,17 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-16">
 
         <AnimateIn
-          className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 gap-4"
+          className="mb-10"
           direction="up"
         >
-          <div>
-            <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-4">
-              What we do
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold italic leading-tight text-white">
-              Four things.
-              <br />
-              Done exceptionally.
-            </h2>
-          </div>
-
-          <a
-            href="#services"
-            className="relative group inline-block font-sans text-sm tracking-wide text-[#6b6b6b] hover:text-[#B07040] transition-colors duration-300 self-start md:self-auto pb-0.5"
-          >
-            All services →
-            <span
-              aria-hidden
-              className="absolute bottom-0 left-0 h-px w-0 bg-[#B07040] transition-all duration-300 ease-out group-hover:w-full"
-            />
-          </a>
+          <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase mb-4">
+            What we do
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold italic leading-tight text-white">
+            Four things.
+            <br />
+            Done exceptionally.
+          </h2>
         </AnimateIn>
 
         <div>
@@ -67,12 +54,6 @@ export default function Services() {
                   </span>
                   <span className="font-sans text-sm text-[#6b6b6b] max-w-[260px] text-right">
                     {s.desc}
-                  </span>
-                  <span
-                    aria-hidden
-                    className="font-sans text-[20px] text-[#B07040] ml-8 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                  >
-                    →
                   </span>
                 </div>
 
