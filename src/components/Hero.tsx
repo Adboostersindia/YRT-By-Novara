@@ -45,12 +45,12 @@ export default function Hero() {
 
         {/* Content — slides up on load */}
         <div
-          className={`relative z-20 flex flex-col justify-between h-full px-5 pt-24 pb-8 ${
+          className={`relative z-20 flex flex-col h-full px-5 pt-24 pb-8 ${
             animated ? "animate-slideUp" : "opacity-0"
           }`}
         >
           {/* Top: headline + body */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 shrink-0">
             <p className="font-sans text-xs tracking-[0.2em] text-[#B07040] uppercase">
               Aesthetics · IVF · Dental · Private Clinics
             </p>
@@ -72,19 +72,38 @@ export default function Hero() {
             </p>
           </div>
 
+          {/* Middle: production-shoot photo */}
+          <div className="relative flex-1 min-h-[140px] my-5 rounded-sm overflow-hidden border border-[#F5F2ED]/10">
+            <Image
+              src="/images/hero-clinic-shoot.jpg"
+              alt="Novara team filming a professional content shoot at an aesthetics clinic"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "center top" }}
+              quality={90}
+            />
+            <div className="absolute inset-0 bg-[#B07040]/10 pointer-events-none" />
+          </div>
+
           {/* Bottom: trust bar + CTAs */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 shrink-0">
             <div aria-hidden="true" className="w-full h-px bg-[#F5F2ED]/10 mb-1" />
-            <div className="flex items-center gap-3 overflow-hidden mb-1">
-              <span className="font-sans text-[8px] tracking-[0.14em] text-[#F5F2ED]/20 uppercase flex-shrink-0">
-                Trusted by
+            <div className="flex flex-col gap-2 mb-1">
+              <span className="font-sans text-[8px] tracking-[0.14em] text-[#F5F2ED]/30 uppercase">
+                Industries we serve
               </span>
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="w-14 h-4 bg-[#F5F2ED]/10 rounded-sm flex-shrink-0"
-                />
-              ))}
+              <div className="overflow-hidden relative w-full">
+                <div className="flex gap-6 items-center animate-marquee whitespace-nowrap w-max">
+                  {[...INDUSTRIES_TRUST, ...INDUSTRIES_TRUST].map((label, i) => (
+                    <span
+                      key={i}
+                      className="font-serif italic text-sm text-[#F5F2ED]/55 whitespace-nowrap shrink-0"
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <button

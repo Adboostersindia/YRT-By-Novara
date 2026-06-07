@@ -17,14 +17,14 @@ export default function Industries() {
           {/* Image — slides from left */}
           <AnimateIn className="w-full md:flex-1 order-first" direction="right" distance={50} duration={1500}>
             <div
-              className="relative h-[260px] md:h-[540px] w-full rounded-sm overflow-hidden shadow-xl"
+              className="relative w-full max-w-[420px] md:max-w-none mx-auto aspect-[4/5] rounded-sm overflow-hidden shadow-xl"
               style={{ border: "1px solid rgba(176,112,64,0.3)" }}
             >
               <Image
                 src="/who-we-serve.png"
                 alt="Real clinics, real growth: case study snapshot of qualified leads, cost per lead, consultations booked, return on ad spend, revenue generated, and average rating"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
               <div className="absolute inset-0 bg-[#B07040]/4 pointer-events-none" />
             </div>
