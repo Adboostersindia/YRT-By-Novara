@@ -78,7 +78,7 @@ export default function Footer() {
           {/* Left: tagline + socials */}
           <div className="text-center md:text-left">
             <p className="font-sans text-sm leading-relaxed text-neutral-400 max-w-xs mx-auto md:mx-0">
-              Your extended revenue department — for aesthetics clinics, IVF
+              Your extended revenue department for aesthetics clinics, IVF
               centres, dental practices, and private clinics that want to grow.
             </p>
           </div>

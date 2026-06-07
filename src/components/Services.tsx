@@ -1,7 +1,7 @@
 import { AnimateIn } from "./AnimateIn";
 
 const SERVICES = [
-  { num: "01", name: "Paid Ads",          desc: "Google, Meta & Facebook — built to convert." },
+  { num: "01", name: "Paid Ads",          desc: "Google, Meta & Facebook, built to convert." },
   { num: "02", name: "SEO & AEO",         desc: "Search rankings and AI engine visibility." },
   { num: "03", name: "Website Building",  desc: "Premium sites, built and maintained by us." },
   { num: "04", name: "Ecommerce",         desc: "Full-stack store setup and ongoing operations." },
