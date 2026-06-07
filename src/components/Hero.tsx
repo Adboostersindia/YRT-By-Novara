@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { openLeadModal } from "@/lib/leadModalStore";
 
 const INDUSTRIES_TRUST = [
   "Aesthetics",
@@ -25,23 +26,26 @@ export default function Hero() {
       {/* ── MOBILE LAYOUT (hidden on md+) ── */}
       <div className="md:hidden relative h-screen min-h-[600px] max-h-[900px] overflow-hidden bg-[#141414]">
 
-        {/* Background image */}
-        <Image
-          src="/images/hero-clinic-shoot.jpg"
-          alt="Novara team filming at an aesthetics clinic"
-          fill
-          className="object-cover"
-          style={{ objectPosition: "center top" }}
-          priority
-          quality={95}
+        {/* Decorative copper glows — replace the background photo on mobile */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-28 -right-20 w-72 h-72 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(176,112,64,0.28) 0%, rgba(176,112,64,0) 70%)" }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/3 -left-24 w-64 h-64 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(176,112,64,0.16) 0%, rgba(176,112,64,0) 70%)" }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-32 right-0 w-80 h-80 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(176,112,64,0.12) 0%, rgba(176,112,64,0) 70%)" }}
         />
 
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/88 via-[#141414]/78 to-[#141414]/93 z-10" />
-
-        {/* Content overlaid on image — slides up on load */}
+        {/* Content — slides up on load */}
         <div
-          className={`absolute inset-0 z-20 flex flex-col justify-between px-5 pt-20 pb-8 ${
+          className={`relative z-20 flex flex-col justify-between h-full px-5 pt-24 pb-8 ${
             animated ? "animate-slideUp" : "opacity-0"
           }`}
         >
@@ -83,12 +87,13 @@ export default function Hero() {
               ))}
             </div>
 
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={openLeadModal}
               className="font-sans bg-[#B07040] text-[#F5F2ED] w-full py-4 text-xs tracking-[0.1em] uppercase text-center"
             >
               Book a discovery call
-            </a>
+            </button>
             <a
               href="#results"
               className="font-sans text-sm text-[#F5F2ED]/60 text-center w-full py-3.5 border border-[#F5F2ED]/20"
@@ -131,12 +136,13 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap items-center gap-6 mt-10">
-                <a
-                  href="#contact"
+                <button
+                  type="button"
+                  onClick={openLeadModal}
                   className="font-sans bg-n-copper text-n-bg px-9 py-4 text-xs tracking-[0.1em] uppercase hover:bg-[#C8834A] transition-colors duration-300"
                 >
                   Book a discovery call
-                </a>
+                </button>
                 <a
                   href="#results"
                   className="font-sans text-sm text-n-bg/40 hover:text-n-bg/80 transition-colors"
