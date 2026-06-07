@@ -9,7 +9,6 @@ const Industries      = dynamic(() => import("@/components/Industries"),      { 
 const HowWeWork       = dynamic(() => import("@/components/HowWeWork"),       { loading: () => null });
 const Testimonials    = dynamic(() => import("@/components/Testimonials"),    { loading: () => null });
 const ResultsSnapshot = dynamic(() => import("@/components/ResultsSnapshot"), { loading: () => null });
-const CTABanner       = dynamic(() => import("@/components/CTABanner"),       { loading: () => null });
 const LeadForm        = dynamic(() => import("@/components/LeadForm"),        { loading: () => null });
 const Footer          = dynamic(() => import("@/components/Footer"),          { loading: () => null });
 
@@ -26,7 +25,6 @@ export default function Home() {
         <HowWeWork />
         <Testimonials />
         <ResultsSnapshot />
-        <CTABanner />
         <LeadForm />
       </main>
       <Footer />

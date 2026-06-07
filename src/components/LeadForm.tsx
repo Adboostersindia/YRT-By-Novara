@@ -60,13 +60,17 @@ export default function LeadForm() {
     <section id="contact" className="w-full py-20 px-5 bg-neutral-50 overflow-x-hidden">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#B07040] mb-4">
+            Let&apos;s Talk
+          </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">
-            Book your free strategy call
+            Ready to grow?
           </h2>
           <div aria-hidden="true" className="border-t-2 border-[#B07040] w-12 mx-auto my-5" />
           <p className="font-sans text-sm md:text-base leading-relaxed text-neutral-500 max-w-md mx-auto">
-            Share a few details below and our team will be in touch within one
-            business day to schedule your call.
+            No pitch decks. No retainer traps. Share a few details below
+            and we&apos;ll be in touch within one business day to book your
+            free 30-minute strategy call.
           </p>
         </div>
 
