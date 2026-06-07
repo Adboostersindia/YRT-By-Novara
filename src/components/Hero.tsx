@@ -3,35 +3,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const LOGOS = [
-  <svg key="aura" height="28" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="21" fontFamily="Georgia, serif" fontSize="18" fontWeight="400" fill="white" letterSpacing="2">AURA</text>
-    <text x="58" y="21" fontFamily="Georgia, serif" fontSize="11" fontWeight="400" fill="white" letterSpacing="1" opacity="0.6">CLINIC</text>
-  </svg>,
-  <svg key="lumiere" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="20" fontFamily="Georgia, serif" fontSize="16" fontStyle="italic" fontWeight="400" fill="white" letterSpacing="1.5">Lumière</text>
-  </svg>,
-  <svg key="nova" height="28" viewBox="0 0 105 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="8" cy="14" r="5" fill="none" stroke="white" strokeWidth="1"/>
-    <circle cx="8" cy="14" r="2" fill="white"/>
-    <text x="20" y="19" fontFamily="system-ui, sans-serif" fontSize="13" fontWeight="500" fill="white" letterSpacing="2">NOVA IVF</text>
-  </svg>,
-  <svg key="revive" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="18" fontFamily="system-ui, sans-serif" fontSize="14" fontWeight="300" fill="white" letterSpacing="5">REVIVE</text>
-    <line x1="0" y1="23" x2="72" y2="23" stroke="white" strokeWidth="0.5" opacity="0.4"/>
-  </svg>,
-  <svg key="pearl" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="10" width="8" height="8" transform="rotate(45 4 14)" fill="none" stroke="white" strokeWidth="1"/>
-    <text x="16" y="19" fontFamily="Georgia, serif" fontSize="13" fontWeight="400" fill="white" letterSpacing="1.5">Pearl Dental</text>
-  </svg>,
-  <svg key="harley" height="28" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="16" fontFamily="system-ui, sans-serif" fontSize="10" fontWeight="500" fill="white" letterSpacing="3">HARLEY STREET</text>
-    <text x="0" y="26" fontFamily="system-ui, sans-serif" fontSize="8" fontWeight="300" fill="white" letterSpacing="4" opacity="0.6">CLINIC</text>
-  </svg>,
-  <svg key="serene" height="28" viewBox="0 0 100 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 20 C6 10 14 6 14 6 C14 6 14 16 6 20Z" fill="white" opacity="0.8"/>
-    <text x="20" y="19" fontFamily="Georgia, serif" fontSize="15" fontStyle="italic" fontWeight="400" fill="white" letterSpacing="1">Serene</text>
-  </svg>,
+const INDUSTRIES_TRUST = [
+  "Aesthetics",
+  "IVF & Fertility",
+  "Dental",
+  "Private Clinics",
+  "Multi-Channel Clinics",
 ];
 
 export default function Hero() {
@@ -195,16 +172,16 @@ export default function Hero() {
         {/* Desktop trust bar */}
         <div className="border-t border-n-bg/10 py-5 flex items-center gap-12 px-8 md:px-16">
           <span className="font-sans text-[9px] tracking-[0.2em] text-n-bg/25 uppercase whitespace-nowrap shrink-0">
-            Trusted by
+            Industries we serve
           </span>
           <div className="overflow-hidden relative w-full">
             <div className="flex gap-16 items-center animate-marquee whitespace-nowrap w-max">
-              {[...LOGOS, ...LOGOS].map((logo, i) => (
+              {[...INDUSTRIES_TRUST, ...INDUSTRIES_TRUST].map((label, i) => (
                 <span
                   key={i}
-                  className="opacity-60 hover:opacity-90 transition-opacity shrink-0"
+                  className="font-serif italic text-base md:text-lg text-n-bg/60 hover:text-n-bg/90 tracking-wide whitespace-nowrap transition-colors duration-300 shrink-0"
                 >
-                  {logo}
+                  {label}
                 </span>
               ))}
             </div>
