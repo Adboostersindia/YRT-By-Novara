@@ -9,8 +9,14 @@ type Status = "idle" | "submitting" | "success" | "error";
 const inputClasses =
   "w-full rounded-sm border border-neutral-300 bg-white px-4 py-3 font-sans text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors focus:border-[#B07040] focus:ring-1 focus:ring-[#B07040]";
 
+const compactInputClasses =
+  "w-full rounded-sm border border-neutral-300 bg-white px-3 py-2 font-sans text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors focus:border-[#B07040] focus:ring-1 focus:ring-[#B07040]";
+
 const labelClasses =
   "block font-sans text-xs tracking-[0.15em] uppercase text-neutral-500 mb-2";
+
+const compactLabelClasses =
+  "block font-sans text-[10px] tracking-[0.1em] uppercase text-neutral-500 mb-1";
 
 /**
  * The actual form markup + submit logic, shared between the inline
@@ -63,29 +69,37 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
 
   return (
     <>
-      <div className={compact ? "text-center mb-7" : "text-center mb-10"}>
-        <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#B07040] mb-4">
+      <div className={compact ? "text-center mb-4" : "text-center mb-10"}>
+        <p className={compact ? "font-sans text-[10px] tracking-[0.2em] uppercase text-[#B07040] mb-1.5" : "font-sans text-xs tracking-[0.2em] uppercase text-[#B07040] mb-4"}>
           Let&apos;s Talk
         </p>
         <h2
           className={
             compact
-              ? "font-serif text-3xl font-bold text-neutral-900 leading-tight"
+              ? "font-serif text-2xl font-bold text-neutral-900 leading-tight"
               : "font-serif text-4xl md:text-5xl font-bold text-neutral-900 leading-tight"
           }
         >
           Ready to grow?
         </h2>
-        <div aria-hidden="true" className="border-t-2 border-[#B07040] w-12 mx-auto my-5" />
-        <p className="font-sans text-sm md:text-base leading-relaxed text-neutral-500 max-w-md mx-auto">
-          No pitch decks. No retainer traps. Share a few details below
-          and we&apos;ll be in touch within one business day to book your
-          free 30-minute strategy call.
-        </p>
+        {compact ? (
+          <p className="font-sans text-xs leading-relaxed text-neutral-500 max-w-md mx-auto mt-1.5">
+            Share a few details and we&apos;ll be in touch within one business day.
+          </p>
+        ) : (
+          <>
+            <div aria-hidden="true" className="border-t-2 border-[#B07040] w-12 mx-auto my-5" />
+            <p className="font-sans text-sm md:text-base leading-relaxed text-neutral-500 max-w-md mx-auto">
+              No pitch decks. No retainer traps. Share a few details below
+              and we&apos;ll be in touch within one business day to book your
+              free 30-minute strategy call.
+            </p>
+          </>
+        )}
       </div>
 
       {status === "success" ? (
-        <div className="bg-white rounded-2xl shadow-xl py-14 px-6 md:px-16 text-center">
+        <div className={compact ? "bg-white rounded-2xl shadow-xl py-8 px-6 text-center" : "bg-white rounded-2xl shadow-xl py-14 px-6 md:px-16 text-center"}>
           <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#B07040]/10">
             <span className="font-serif text-3xl text-[#B07040]">✓</span>
           </div>
@@ -98,7 +112,7 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className={compact ? "bg-white rounded-2xl shadow-xl py-8 px-5 md:px-8" : "bg-white rounded-2xl shadow-xl py-10 px-6 md:px-12"}
+          className={compact ? "bg-white rounded-2xl shadow-xl py-6 px-5" : "bg-white rounded-2xl shadow-xl py-10 px-6 md:px-12"}
         >
           {/* Honeypot field — hidden from real users, catches bots. */}
           <div className="absolute -left-[9999px]" aria-hidden="true">
@@ -112,9 +126,9 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className={compact ? "grid grid-cols-2 gap-3" : "grid grid-cols-1 sm:grid-cols-2 gap-5"}>
             <div>
-              <label htmlFor="name" className={labelClasses}>
+              <label htmlFor="name" className={compact ? compactLabelClasses : labelClasses}>
                 Name <span className="text-[#B07040]">*</span>
               </label>
               <input
@@ -123,13 +137,13 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
                 type="text"
                 required
                 autoComplete="name"
-                className={inputClasses}
+                className={compact ? compactInputClasses : inputClasses}
                 placeholder="Dr. Jane Doe"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className={labelClasses}>
+              <label htmlFor="email" className={compact ? compactLabelClasses : labelClasses}>
                 Email <span className="text-[#B07040]">*</span>
               </label>
               <input
@@ -138,13 +152,13 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
                 type="email"
                 required
                 autoComplete="email"
-                className={inputClasses}
+                className={compact ? compactInputClasses : inputClasses}
                 placeholder="jane@clinic.com"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className={labelClasses}>
+              <label htmlFor="phone" className={compact ? compactLabelClasses : labelClasses}>
                 Phone <span className="text-[#B07040]">*</span>
               </label>
               <input
@@ -153,16 +167,16 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
                 type="tel"
                 required
                 autoComplete="tel"
-                className={inputClasses}
+                className={compact ? compactInputClasses : inputClasses}
                 placeholder="+44 7700 900000"
               />
             </div>
 
             <div>
-              <label htmlFor="clinicType" className={labelClasses}>
+              <label htmlFor="clinicType" className={compact ? compactLabelClasses : labelClasses}>
                 Clinic type
               </label>
-              <select id="clinicType" name="clinicType" className={inputClasses} defaultValue="">
+              <select id="clinicType" name="clinicType" className={compact ? compactInputClasses : inputClasses} defaultValue="">
                 <option value="" disabled>
                   Select one…
                 </option>
@@ -174,31 +188,35 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
               </select>
             </div>
 
-            <div className="sm:col-span-2">
-              <label htmlFor="budget" className={labelClasses}>
-                Monthly marketing budget
-              </label>
-              <input
-                id="budget"
-                name="budget"
-                type="text"
-                className={inputClasses}
-                placeholder="e.g. £2,000 – £5,000"
-              />
-            </div>
+            {!compact && (
+              <>
+                <div className="sm:col-span-2">
+                  <label htmlFor="budget" className={labelClasses}>
+                    Monthly marketing budget
+                  </label>
+                  <input
+                    id="budget"
+                    name="budget"
+                    type="text"
+                    className={inputClasses}
+                    placeholder="e.g. £2,000 – £5,000"
+                  />
+                </div>
 
-            <div className="sm:col-span-2">
-              <label htmlFor="message" className={labelClasses}>
-                What do you need?
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className={`${inputClasses} resize-y`}
-                placeholder="Tell us a little about your goals…"
-              />
-            </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="message" className={labelClasses}>
+                    What do you need?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className={`${inputClasses} resize-y`}
+                    placeholder="Tell us a little about your goals…"
+                  />
+                </div>
+              </>
+            )}
           </div>
 
           {status === "error" && (
@@ -213,12 +231,16 @@ export function LeadFormFields({ compact = false }: { compact?: boolean }) {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="mt-7 w-full inline-flex items-center justify-center px-8 py-3.5 font-sans text-xs tracking-widest uppercase text-white rounded-sm bg-[#B07040] hover:bg-[#96603A] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+            className={
+              compact
+                ? "mt-4 w-full inline-flex items-center justify-center px-8 py-3 font-sans text-xs tracking-widest uppercase text-white rounded-sm bg-[#B07040] hover:bg-[#96603A] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                : "mt-7 w-full inline-flex items-center justify-center px-8 py-3.5 font-sans text-xs tracking-widest uppercase text-white rounded-sm bg-[#B07040] hover:bg-[#96603A] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+            }
           >
             {status === "submitting" ? "Sending…" : "Submit My Details"}
           </button>
 
-          <p className="font-sans text-xs text-neutral-400 mt-4 text-center tracking-wide">
+          <p className={compact ? "font-sans text-[11px] text-neutral-400 mt-2.5 text-center tracking-wide" : "font-sans text-xs text-neutral-400 mt-4 text-center tracking-wide"}>
             We&apos;ll only use your details to get in touch. No spam, ever.
           </p>
         </form>
